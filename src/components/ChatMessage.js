@@ -8,7 +8,7 @@ const ChatMessage = ({message}) => {
 
   return (
     <div className={`chat-message ${message.user === "gpt" && "chatgpt"}`}>
-        <div className="chat-message-center">
+        <div className={`chat-message-center ${message.user !== "gpt" && "user"}`}>
             <div className={`avatar ${message.user === "gpt" && "chatgpt"}`}>
                { message.user === "gpt"?
                 <SvgComponent/>
